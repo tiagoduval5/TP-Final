@@ -42,7 +42,7 @@ function App() {
 
       setTrackedCities(cityObjects)
       if (cityObjects.length === 0) {
-        setError("Impossible d'initialiser les villes. Verifie ta connexion internet.")
+        setError("Impossible d'initialiser les villes. Vérifie ta connexion internet.")
       }
     }
 
@@ -68,11 +68,11 @@ function App() {
       setWeatherData(successful)
       if (failedCount > 0) {
         setError(
-          `Certaines villes n'ont pas pu etre chargees (${failedCount}). Verifie la connexion reseau.`,
+          `Certaines villes n'ont pas pu être chargées (${failedCount}). Vérifie la connexion reseau.`,
         )
       }
     } catch {
-      setError("Erreur reseau. Impossible de recuperer les donnees meteo.")
+      setError("Erreur reseau. Impossible de récupérer les donnees météo.")
     } finally {
       setIsLoading(false)
     }
@@ -128,7 +128,7 @@ function App() {
       (city) => city.name.toLowerCase() === value.toLowerCase(),
     )
     if (alreadyExists) {
-      setError('Cette ville est deja presente dans la liste.')
+      setError('Cette ville est deja présente dans la liste.')
       return
     }
 
@@ -153,10 +153,10 @@ function App() {
   return (
     <main className="app">
       <header className="hero">
-        <h1>Tableau Meteo React</h1>
+        <h1>Tableau Météo React</h1>
         <p>
           Application modulaire avec API Open-Meteo, donnees dynamiques et interface
-          optimisee.
+          optimisée.
         </p>
       </header>
 

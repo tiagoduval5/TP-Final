@@ -37,16 +37,16 @@ body {
 }
 
 .hero p {
-  color: #475569;
+  color: #6b5c2e;
   margin-top: .6rem;
 }
 
 .panel {
-  background: #fff;
+  background: #fffdf7;
   border-radius: 16px;
   margin-top: 1rem;
   padding: 1rem;
-  box-shadow: 0 8px 24px #0f172a14;
+  box-shadow: 0 8px 24px #2b211014;
 }
 
 .controls {
@@ -60,7 +60,7 @@ body {
 }
 
 .controls label {
-  color: #334155;
+  color: #5a4d26;
   flex-direction: column;
   gap: .45rem;
   font-size: .92rem;
@@ -87,21 +87,21 @@ input, select, button {
 }
 
 input, select {
-  background: #fff;
-  border: 1px solid #cbd5e1;
+  background: #fffdf7;
+  border: 1px solid #e6dcc2;
   border-radius: 10px;
   padding: .6rem .75rem;
 }
 
 .state {
-  background: #e2e8f0;
+  background: #f3ecd3;
   border-radius: 10px;
   margin-top: 1rem;
   padding: .9rem;
 }
 
 .state.error {
-  color: #b91c1c;
+  color: #7f1d1d;
   background: #fee2e2;
 }
 
@@ -113,11 +113,11 @@ input, select {
 }
 
 .card {
-  background: linear-gradient(135deg, #fff, #fffbee);
-  border: 1px solid #e2e8f0;
+  background: linear-gradient(135deg, #fffdf7, #f5ecd1);
+  border: 1px solid #e6dcc2;
   border-radius: 16px;
   padding: .9rem;
-  box-shadow: 0 6px 16px #1e293b14;
+  box-shadow: 0 6px 16px #2b211014;
 }
 
 .card-top {
@@ -137,20 +137,20 @@ input, select {
 }
 
 .temp {
-  color: #1e293b;
+  color: #2b2110;
   margin: .2rem 0;
   font-size: 1.9rem;
   font-weight: 700;
 }
 
 .desc {
-  color: #475569;
+  color: #6b5c2e;
   text-transform: capitalize;
   margin-bottom: .5rem;
 }
 
 .meta {
-  color: #334155;
+  color: #5a4d26;
   flex-direction: column;
   gap: .2rem;
   font-size: .95rem;

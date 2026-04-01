@@ -10,7 +10,7 @@ function WeatherCard({ city }) {
 			<p className="temp">{city.temp} degC</p>
 			<p className="desc">{city.description}</p>
 			<div className="meta">
-				<span>Humidite: {city.humidity}%</span>
+				<span>Humidité: {city.humidity}%</span>
 				<span>Vent: {city.wind} m/s</span>
 			</div>
 		</article>

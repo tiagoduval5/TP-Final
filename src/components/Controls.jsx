@@ -45,14 +45,14 @@ function Controls({
 					onChange={(event) => onSortChange(event.target.value)}
 				>
 					<option value="none">Aucun tri</option>
-					<option value="temp-asc">Temperature croissante</option>
-					<option value="temp-desc">Temperature décroissante</option>
-					<option value="target">Proximité temperature cible</option>
+					<option value="temp-asc">Température croissante</option>
+					<option value="temp-desc">Température décroissante</option>
+					<option value="target">Proximité température cible</option>
 				</select>
 			</label>
 
 			<label>
-				Temperature cible: <strong>{targetTemp}°C</strong>
+				Température cible: <strong>{targetTemp}°C</strong>
 				<input
 					type="range"
 					min="0"
@@ -63,7 +63,7 @@ function Controls({
 			</label>
 
 			<button className="refresh-btn" onClick={onRefresh} disabled={isLoading}>
-				{isLoading ? "Actualisation..." : "Actualiser les donnees"}
+				{isLoading ? "Actualisation..." : "Actualiser les données"}
 			</button>
 		</section>
 	);

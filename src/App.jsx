@@ -43,7 +43,7 @@ function App() {
 			setTrackedCities(cityObjects);
 			if (cityObjects.length === 0) {
 				setError(
-					"Impossible d'initialiser les villes. Vérifie ta connexion internet.",
+					"Impossible d'initialiser les villes. Vérifiez votre connexion internet.",
 				);
 			}
 		};
@@ -68,13 +68,17 @@ function App() {
 			const failedCount = rejected.length;
 
 			setWeatherData(successful);
-			if (failedCount > 0) {
+			if (failedCount === 1) {
 				setError(
-					`Certaines villes n'ont pas pu être chargées (${failedCount}). Vérifie la connexion reseau.`,
+					`${failedCount} ville n'a pas pu être chargée.`,
+				);
+			} else if (failedCount > 1) {
+				setError(
+					`${failedCount} villes n'ont pas pu être chargées.`,
 				);
 			}
 		} catch {
-			setError("Erreur reseau. Impossible de récupérer les donnees météo.");
+			setError("Erreur réseau. Impossible de récupérer les donnees météo.");
 		} finally {
 			setIsLoading(false);
 		}
@@ -137,7 +141,7 @@ function App() {
 			(city) => city.name.toLowerCase() === value.toLowerCase(),
 		);
 		if (alreadyExists) {
-			setError("Cette ville est deja présente dans la liste.");
+			setError("Cette ville est déjà présente dans la liste.");
 			return;
 		}
 
@@ -148,7 +152,7 @@ function App() {
 			setTrackedCities((prev) => [...prev, newCity]);
 			setCityToAdd("");
 		} catch {
-			setError("Ville introuvable. Essaie un autre nom.");
+			setError("Ville introuvable. Essayez un autre nom.");
 		} finally {
 			setIsLoading(false);
 		}
@@ -164,7 +168,7 @@ function App() {
 			<header className="hero">
 				<h1>Tableau Météo React</h1>
 				<p>
-					Application modulaire avec API Open-Meteo, donnees dynamiques et
+					Application modulaire avec API Open-Meteo, données dynamiques et
 					interface optimisée.
 				</p>
 			</header>
@@ -183,7 +187,7 @@ function App() {
 				isLoading={isLoading}
 			/>
 
-			{isLoading && <p className="state">Chargement des donnees...</p>}
+			{isLoading && <p className="state">Chargement des données...</p>}
 			{error && <p className="state error">{error}</p>}
 
 			{!isLoading && (
@@ -191,7 +195,7 @@ function App() {
 					<section className="cards-grid">
 						{paginatedData.length === 0 ? (
 							<p className="state">
-								Aucune ville ne correspond a la recherche. pensez à l'ajouter !
+								Aucune ville ne correspond à la recherche. Pensez à l'ajouter !
 							</p>
 						) : (
 							paginatedData.map((city) => (

@@ -11,7 +11,7 @@ import {
 function TemperatureChart({ data }) {
 	return (
 		<section className="panel chart-panel">
-			<h2>Comparaison des temperatures</h2>
+			<h2>Comparaison des températures</h2>
 			<div className="chart-wrapper">
 				<ResponsiveContainer width="100%" height={320}>
 					<LineChart data={data}>

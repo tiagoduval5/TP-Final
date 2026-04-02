@@ -46,13 +46,13 @@ function Controls({
 				>
 					<option value="none">Aucun tri</option>
 					<option value="temp-asc">Temperature croissante</option>
-					<option value="temp-desc">Temperature decroissante</option>
-					<option value="target">Proximite temperature cible</option>
+					<option value="temp-desc">Temperature décroissante</option>
+					<option value="target">Proximité temperature cible</option>
 				</select>
 			</label>
 
 			<label>
-				Temperature cible: <strong>{targetTemp} degC</strong>
+				Temperature cible: <strong>{targetTemp}°C</strong>
 				<input
 					type="range"
 					min="0"

@@ -52,7 +52,7 @@ function Controls({
 			</label>
 
 			<label>
-				Temperature cible: <strong>{targetTemp} degC</strong>
+				Temperature cible: <strong>{targetTemp}°C</strong>
 				<input
 					type="range"
 					min="0"

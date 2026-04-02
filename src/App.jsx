@@ -181,7 +181,7 @@ function App() {
         <>
           <section className="cards-grid">
             {paginatedData.length === 0 ? (
-              <p className="state">Aucune ville ne correspond a la recherche.</p>
+              <p className="state">Aucune ville ne correspond a la recherche. pensez à l'ajouter !</p>
             ) : (
               paginatedData.map((city) => <WeatherCard key={city.id} city={city} />)
             )}

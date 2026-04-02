@@ -17,7 +17,7 @@ function TemperatureChart({ data }) {
 					<LineChart data={data}>
 						<CartesianGrid strokeDasharray="3 3" />
 						<XAxis dataKey="ville" />
-						<YAxis unit=" degC" />
+						<YAxis unit="°C" />
 						<Tooltip />
 						<Line
 							type="monotone"
